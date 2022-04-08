@@ -1,4 +1,5 @@
-// Insert file Library
+// Insert file Library  
+// Change Pin_out in Library or Define new Pins
 #include <SPI.h>
 #include <DMD2.h>
 #include <fonts/Arial_Black_16.h>
