@@ -1,0 +1,28 @@
+//List Certificate/Files In Module...
+
+>> AT+CCERTLIST
+............................................................................................................................................
+<< AT+FSLS=? <<Test Command ...// List directories/files in current directory>>
+<<AT+FSLS?    <<Read Command..../
+.............................................................................................................................................
+// AT+CCERTDELE Delete certificate from the module...
+
+>> AT+CCERTDELE=<filename>
+
+AT+CCERTDOWN="clientkey.pem",1679
+
+AT+CCERTDOWN="cacert.pem",1187
+
+AT+CMQTTACCQ=0,"SIM7600_P10",1
+
+mytopic
+
+AT+CMQTTCONNECT=1,"tcp://a3iuhtzz3ex62l-ats.iot.ap-south-1.amazonaws.com",8883
+
+AT+CIPOPEN=0,"TCP","a3iuhtzz3ex62l-ats.iot.ap-south-1.amazonaws.com",8883
+
+AT+CIPOPEN=1,”TCP”,”117.131.85.139″,5253
+
+AT+CMQTTSUBTOPIC=0,31,1
+
+AT+CMQTTCONNECT=0,"tcp://a3iuhtzz3ex62l-ats.iot.ap-south-1.amazonaws.com:8883"

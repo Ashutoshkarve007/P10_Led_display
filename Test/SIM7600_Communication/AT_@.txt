@@ -1,0 +1,127 @@
+https://m2msupport.net/m2msupport/atcreg-network-registration/
+
+
+
+AT
+AT+CPIN=?
+
+//check Battery Status
+AT+CBC
+
+//Get Device full Functionality
+AT+CFUN?
+
+//Check if Simcom module is connected to the network
+AT+CGACT?
+
+//getting start with Mqtt
+
+AT+CCERTDOWN="clientcert.pem", 1224
+
+AT+CCERTDOWN="clientkey.pem",1679
+
+AT+CCERTDOWN="cacert.pem",1187
+
+AT+CCERTLIST
+
+AT+CSSLCFG="sslversion",0,4
+AT+CSSLCFG="authmode",0,2
+AT+CSSLCFG="cacert",0,"cacert.pem"
+AT+CSSLCFG="clientcert",0,"clientcert.pem"
+AT+CSSLCFG="clientkey",0,"clientkey.pem"
+
+AT+CMQTTSTART
+AT+CMQTTACCQ=0,"SIMCom_client01",1
+AT+CMQTTSSLCFG=0,0
+AT+CMQTTWILLTOPIC=0,31
+aws/things/SIM7600_device01/
+AT+CMQTTWILLMSG=0,17,1
+SIMCom Connected!
+
+aws/things/SIM7600_device01/
+AWS IoT/Manage/Things/SIM7600_device01/
+
+AT+CMQTTCONNECT=0,"tcp://a39i0c3i2yvc9z-ats.iot.ap-south-1.amazonaws.com:8883"
+
+
+
+AT+CIPOPEN=0,"TCP","a39i0c3i2yvc9z-ats.iot.ap-south-1.amazonaws.com",6031
+
+AT+CMQTTCONNECT=0,"tcp://a39i0c3i2yvc9z-ats.iot.ap-south-1.amazonaws.com",20,1
+
+AT+CMQTTCONNECT=0,"tcp://a39i0c3i2yvc9z-ats.iot.ap-south-1.amazonaws.com:8883",60,1
+
+
+
+----=+++++++
+
+AT+CMQTTCONNECT=0,"tcp://a39i0c3i2yvc9z-ats.iot.ap-south-1.amazonaws.com:8883"
+
+AT+CMQTTSUB=1
+
++++++++++
+Before all FTP(S) related operations, we should ensure the following:
+Ensure network is available:
+AT+CSQ
++CSQ: 23,0
+OK
+AT+CREG?
++CREG: 0,1
+OK
+AT+CGREG?
++CGREG: 0,1
+OK
+AT+CPSI?
++CPSI:
+LTE,Online,460-00,0x333C,39589680,308,EUT
+RAN-BAND3,1350,5,0,0,54,0,22
+OK
+//In WCDMA/GSW,you need to continue to
+execute the following instructions
+AT+CGDCONT=cid,”ip”,”APN”
+OK
+AT+CGACT=1,cid
+OK
+AT+CGACT?
++CGACT: 1,1
+OK
+
+
+// start MQTT service, activate PDP context
+AT+CMQTTSTART
+OK
++CMQTTSTART: 0
+// Acquire one client which will connect to a MQTT server not SSL/TLS
+AT+CMQTTACCQ=0,"client test0"
+OK
+// Set the will topic for the CONNECT message
+AT+CMQTTWILLTOPIC=0,10
+>
+OK
+// Set the will message for the CONNECT message
+AT+CMQTTWILLMSG=0,6,1
+>
+OK
+// Connect to a MQTT server
+AT+CMQTTCONNECT=0,"tcp://test.mosquitto.
+org:1883",60,1
+OK
++CMQTTCONNECT: 0,0
+// Subscribe one topic from the server
+AT+CMQTTSUB=0,9,1
+>
+OK
++CMQTTSUB: 0,0
+// Set the topic for the PUBLISH message
+AT+CMQTTTOPIC=0,9
+>
+OK
+// Set the payload for the PUBLISH message
+AT+CMQTTPAYLOAD=0,60
+>
+OK
+// Publish a message
+AT+CMQTTPUB=0,1,60
+OK
+
+AT+CMQTTCONNECT=0,"tcp://a39i0c3i2yvc9z-ats.iot.ap-south-1.amazonaws.com:1883",60,1
