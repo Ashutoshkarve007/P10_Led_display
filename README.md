@@ -17,5 +17,9 @@ PinOut>>
 <br/>
 
 ![alt text](https://github.com/Ashutoshkarve007/P10_Led_display/blob/main/Images/connector_pin_change.png)
+<ul>
+  >Connection on SIM7600 and ESP32
+  <li> Reference for Tx Rx connection </li>
+  </ul>
 
 ![alt text](https://github.com/Ashutoshkarve007/P10_Led_display/blob/main/Images/wiring%20Diagram.PNG)
