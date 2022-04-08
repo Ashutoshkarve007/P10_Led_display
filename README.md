@@ -16,4 +16,6 @@ PinOut>>
 </ul>
 <br/>
 
-![alt text](https://github.com/Ashutoshkarve007/P10_Led_display/blob/main/connector_pin_change.png?raw=true)
+![alt text](https://github.com/Ashutoshkarve007/P10_Led_display/blob/main/Images/connector_pin_change.png)
+
+![alt text](https://github.com/Ashutoshkarve007/P10_Led_display/blob/main/Images/connector_pin_change.png)
