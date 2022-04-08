@@ -20,4 +20,5 @@ PinOut>>
   <li> #define PIN_DMD_SCLK		14		// D02 </li>
   <li> #define PIN_DMD_R_DATA    23	// D23_MOSI is SPI Master Out if SPI is used </li>
 </ul>
+<br/>
 ![alt text](https://github.com/Ashutoshkarve007/P10_Led_display/blob/main/connector_pin_change.png)
