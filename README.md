@@ -19,3 +19,5 @@ PinOut>>
 #define PIN_DMD_CLK		18		// D18_SCK  is SPI Clock if SPI is used
 #define PIN_DMD_SCLK		14		// D02
 #define PIN_DMD_R_DATA    23	// D23_MOSI is SPI Master Out if SPI is used
+
+![alt text](https://github.com/Ashutoshkarve007/P10_Led_display/blob/main/connector_pin_change.png)
