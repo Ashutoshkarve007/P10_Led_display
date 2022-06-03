@@ -1,5 +1,5 @@
-# P10_Led_display
-
+# P10_Led_display With ESP32 DMD32 
+all code is available in Final Test.
 **Communication is done between ESP32 and SIM7600EI**
 
 > We remove U6 From Board
@@ -26,3 +26,6 @@ PinOut>>
   </ul>
 
 ![alt text](https://github.com/Ashutoshkarve007/P10_Led_display/blob/main/Images/wiring%20Diagram.PNG)
+
+# P10 with Arduino Mega and ESP32 communication with SIM7600EI
+code is in linkSerial file.
